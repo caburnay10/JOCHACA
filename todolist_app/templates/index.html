@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block title%}
+  <title>Welcome to django_jochaca!</title>
+{% endblock title%}
+
+{% block  content%}
+  <div class='container'>
+    <div class="row mt-5">
+      <div class='col-md-4'>
+        <img src="{% static 'images/stickynotes.ico' %}" alt="minions blue" class="border rounded shadow p-3 mb-5 bg-body" width="360" heihgt="250">
+      </div>
+      <div class='col-md-4'>
+        <img src="{% static 'images/notes1.ico' %}" alt="minions yellow" class="border rounded shadow p-3 mb-5 bg-body" width="360" heihgt="250">
+      </div>
+      <div class='col-md-4'>
+        <img src="{% static 'images/notes2.ico' %}" alt="Gru" class="border rounded shadow p-3 mb-5 bg-body" width="360" heihgt="250">
+      </div>
+    </div>
+    <div class="row mt-1">
+      <div class="col-md-10 offset-md-1">
+        <center><p class="h1 text-primary">Quick And Easy To Use, Anytime, Anywhere!</p></center>
+        <center><p class="h2 mt-3">"Plan Your Day Better, Get Your Lfe Organized"</p></center>
+        <center><p class="h5">django_jochaca Lets You Keep Track Of Your Task In One Place</p></center>
+        <center><a href="{%url 'todolist'%}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow-lg">Let's Get Started</button></a></center>
+      </div>
+    </div>
+  </div>
+{% endblock content%} 
